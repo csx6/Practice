@@ -78,12 +78,50 @@ Module Program
         'Next
 
         '6
+        'Console.WriteLine("ダイヤモンド")
+        'For i As Integer = 1 To 3
+        '    Dim j As Integer = 1
+
+        '    Do While j <= 5
+        '        If j < (4 - i) Then
+        '            Console.Write(" ")
+        '        End If
+        '        j += 1
+        '    Loop
+        '    For k As Integer = 1 To (2 * i - 1)
+        '        Console.Write("*")
+        '    Next
+
+        '    Console.WriteLine()
+        'Next
+
+        'For i As Integer = 4 To 5
+        '    Dim j As Integer = 1
+
+        '    Do While j <= 5
+        '        If j < (i - 2) Then
+        '            Console.Write(" ")
+        '        End If
+        '        j += 1
+        '    Loop
+        '    For k As Integer = 1 To (2 * -i + 11)
+        '        Console.Write("*")
+        '    Next
+
+        '    Console.WriteLine()
+        'Next
+
+        '6
         Console.WriteLine("ダイヤモンド")
-        For i As Integer = 1 To 3
+        Console.WriteLine("何層のダイヤモンドを出力してほしいですか(奇数のみ)：")
+        Dim hgtInt, colInt As Integer
+        hgtInt = Console.ReadLine()
+        colInt = (hgtInt + 1) / 2
+        For i As Integer = 1 To colInt
             Dim j As Integer = 1
 
-            Do While j <= 5
-                If j < (4 - i) Then
+            Do While j <= hgtInt
+                If j < ((colInt + 1) - i) Then
                     Console.Write(" ")
                 End If
                 j += 1
@@ -91,27 +129,23 @@ Module Program
             For k As Integer = 1 To (2 * i - 1)
                 Console.Write("*")
             Next
-
             Console.WriteLine()
         Next
 
-        For i As Integer = 4 To 5
+        For i As Integer = (colInt + 1) To hgtInt
             Dim j As Integer = 1
 
-            Do While j <= 5
-                If j < (i - 2) Then
+            Do While j <= hgtInt
+                If j < (i - (colInt - 1)) Then
                     Console.Write(" ")
                 End If
                 j += 1
             Loop
-            For k As Integer = 1 To (2 * -i + 11)
+            For k As Integer = 1 To (2 * (-i) + (2 * hgtInt + 1))
                 Console.Write("*")
             Next
-
             Console.WriteLine()
         Next
-
-
 
         Console.Read()
     End Sub
