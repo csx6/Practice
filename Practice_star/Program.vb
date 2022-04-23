@@ -112,8 +112,12 @@ Module Program
         'Next
 
         '6
-        Console.WriteLine("ダイヤモンド")
-        Console.WriteLine("何層のダイヤモンドを出力してほしいですか(奇数のみ)：")
+        'When outputting star symbols, focus on the dividing line between graphics and blanks.
+        'The general idea Is To use the i Function To control the number Of lines, And the j function to control the number of graphics in a single line.
+        'On this basis, it Is necessary to confirm the intersection of the blank And the graph. Create axes on the graph so that the set i as the x-axis And the set j as the y-axis. This defines the range of graphs Or blanks.
+
+        Console.WriteLine("diamond")
+        Console.WriteLine("How many layers of diamonds do you want to output?(Odd number only)：")
         Dim hgtInt, colInt As Integer
         hgtInt = Console.ReadLine()
         colInt = (hgtInt + 1) / 2
