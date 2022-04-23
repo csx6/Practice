@@ -124,12 +124,20 @@ Module Program
         For i As Integer = 1 To colInt
             Dim j As Integer = 1
 
-            Do While j <= hgtInt
+            'Do While j <= hgtInt
+            '    If j < ((colInt + 1) - i) Then
+            '        Console.Write(" ")
+            '    End If
+            '    j += 1
+            'Loop
+
+            For j = 1 To hgtInt
                 If j < ((colInt + 1) - i) Then
                     Console.Write(" ")
                 End If
-                j += 1
-            Loop
+
+            Next
+
             For k As Integer = 1 To (2 * i - 1)
                 Console.Write("*")
             Next
@@ -139,18 +147,75 @@ Module Program
         For i As Integer = (colInt + 1) To hgtInt
             Dim j As Integer = 1
 
-            Do While j <= hgtInt
+            'Do While j <= hgtInt
+            '    If j < (i - (colInt - 1)) Then
+            '        Console.Write(" ")
+            '    End If
+            '    j += 1
+            'Loop
+
+            For j = 1 To hgtInt
                 If j < (i - (colInt - 1)) Then
                     Console.Write(" ")
                 End If
-                j += 1
-            Loop
+            Next
             For k As Integer = 1 To (2 * (-i) + (2 * hgtInt + 1))
                 Console.Write("*")
             Next
             Console.WriteLine()
         Next
 
+        'Console.WriteLine("diamond2")
+        'Console.WriteLine("How many layers of diamonds do you want to output?(Odd number only)£º")
+        'Dim hgtInt, colInt As Integer
+        'hgtInt = Console.ReadLine()
+        'colInt = (hgtInt + 1) / 2
+        'For i As Integer = 1 To colInt
+        '    Dim j As Integer = 1
+
+        '    Do While j <= hgtInt
+        '        If j < ((colInt + 1) - i) Then
+        '            Console.Write("*")
+        '        End If
+        '        j += 1
+        '    Loop
+        '    j = 1
+
+        '    For k As Integer = 1 To (2 * i - 1)
+        '        Console.Write(" ")
+        '    Next
+        '    Do While j <= hgtInt
+        '        If j < ((colInt + 1) - i) Then
+        '            Console.Write("*")
+        '        End If
+        '        j += 1
+        '    Loop
+        '    Console.WriteLine()
+        'Next
+
+        'For i As Integer = (colInt + 1) To hgtInt
+        '    Dim j As Integer = 1
+
+        '    Do While j <= hgtInt
+        '        If j < (i - (colInt - 1)) Then
+        '            Console.Write("*")
+        '        End If
+        '        j += 1
+        '    Loop
+        '    j = 1
+
+        '    For k As Integer = 1 To (2 * (-i) + (2 * hgtInt + 1))
+        '        Console.Write(" ")
+        '    Next
+
+        '    Do While j <= hgtInt
+        '        If j < (i - (colInt - 1)) Then
+        '            Console.Write("*")
+        '        End If
+        '        j += 1
+        '    Loop
+        '    Console.WriteLine()
+        'Next
         Console.Read()
     End Sub
 End Module
